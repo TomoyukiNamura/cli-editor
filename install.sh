@@ -37,20 +37,30 @@ else
 fi
 wait
 
-# copy .vimrc to ~
 if [ ! -e ~/.vimrc ];then
-    echo "Info: copy .vimrc."
+    # copy .vimrc to ~
+    echo "Info: copy .vimrc. to HOME"
     cp ./.vimrc ~/
     wait
 
     # install plugin
     echo "Info: install plugins"
     vim +PluginInstall +qall
-
 else
     echo "Info: ~/.vimrc already exists."
 fi
 wait
+
+if [ ! -e ~/.tmux.conf ];then
+    # copy .tmux.conf to  ~
+    echo "Info: copy .tmux.conf to HOME."
+    cp ./.tmux.conf ~/
+    wait
+else
+    echo "Info: ~/.tmux.conf already exists."
+fi
+wait
+
 
 echo "Info: done."
 
