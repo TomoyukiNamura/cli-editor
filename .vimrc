@@ -37,6 +37,9 @@ nnoremap <silent><C-\> :NERDTreeToggle<CR>
 nnoremap <silent><C-w> :Gwrite<CR>
 nnoremap <silent><C-e> :Gcommit<CR>
 nnoremap <silent><C-p> :QuickRun<CR>
+map <C-c><C-c> :SlimuxREPLSendLine<CR>j
+vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
+
 
 " python path
 let g:python3_host_prog = '/Users/tomoyuki/.pyenv/shims/python'
