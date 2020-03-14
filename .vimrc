@@ -27,6 +27,7 @@ Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'thinca/vim-quickrun'
 Plugin 'epeli/slimux'
+Plugin 'posva/vim-vue'
 
 
 " All of your Plugins must be added before the following line
@@ -44,12 +45,18 @@ vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
 " python path
 let g:python3_host_prog = '/Users/tomoyuki/.pyenv/shims/python'
 
-" flake8をLinterとして登録
+" Linter
 let g:ale_linters = {
     \ 'python': ['flake8'],
+    \ 'html': [],
+    \ 'css': ['stylelint'],
+    \ 'javascript': ['eslint'],
+    \ 'vue': ['eslint']
     \ }
 
-" 各ツールをFixerとして登録
+let g:ale_linter_aliases = {'vue': 'css'}
+
+" Fixer
 let g:ale_fixers = {
     \ 'python': ['autopep8', 'black', 'isort'],
     \ }
