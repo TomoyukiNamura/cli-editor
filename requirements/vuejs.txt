@@ -1,0 +1,9 @@
+eslint
+eslint-config-airbnb
+eslint-config-vue
+eslint-plugin-import
+eslint-plugin-jsx-a11y
+eslint-plugin-vue
+stylelint
+stylelint-config-standard
+stylelint-processor-html
