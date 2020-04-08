@@ -38,12 +38,14 @@ nnoremap <silent><C-\> :NERDTreeToggle<CR>
 nnoremap <silent><C-w> :Gwrite<CR>
 nnoremap <silent><C-e> :Gcommit<CR>
 nnoremap <silent><C-p> :QuickRun<CR>
-map <C-c><C-c> :SlimuxREPLSendLine<CR>j
-vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
+nnoremap <silent><CR> :SlimuxREPLSendLine<CR>j
+vnoremap <silent><CR> :SlimuxREPLSendSelection<CR>
+" nnoremap <silent><Space> :SlimuxREPLSendBuffer<CR>
 
 
 " python path
 let g:python3_host_prog = '/Users/tomoyuki/.pyenv/shims/python'
+" let g:python3_host_prog = '/Usr/bin/python'
 
 " Linter
 let g:ale_linters = {
